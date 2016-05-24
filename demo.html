@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>index user-select</title>
+	<style type="text/css">
+		div {
+			width: 500px;
+			margin: 20px auto;
+			border: 1px solid #f66;
+		}
+		/*
+		最新版的浏览器基本都支持css3基本都不用写前缀，写前缀是为了向前兼容老版本的浏览器而已 
+		处理不同浏览器之间的兼容问题
+		-moz-对应 Firefox, 
+		-webkit-对应 Safari and Chrome
+		-o- for Opera
+		-ms- for Internet Explorer
+		 */
+		/*.unSelect {
+			-webkit-user-select: none; //-webkit-对应 Safari and Chrome
+			-moz-user-select: none; //-moz-对应 Firefox
+			-ms-user-select: none; //-ms- for Internet Explorer
+			-o-user-select: none; //-o- for Opera
+			user-select: none;
+		}*/
+	</style>
+</head>
+<body>
+	<!-- index -->
+	<div id="n1">
+	    <div id="n2">
+	        <span id="n3"></span>
+	        <ul id="n4">
+	            <li id="n5">item1</li>
+	            <li id="n6">item2</li>
+	            <li id="n7">item3</li>
+	        </ul>
+	        <span id="n8"></span>
+	    </div>  
+	</div>
+
+	<!-- user-select -->
+	<!-- IE6-9不支持该属性，但支持使用标签属性 onselectstart="return false;" 来达到 user-select:none 的效果； -->
+	<!-- 直到Opera12.5仍然不支持该属性，但和IE6-9一样，也支持使用私有的标签属性 unselectable="on" 来达到 user-select:none 的效果； -->
+	<!-- <div class="unSelect" onselectstart="return false;" unselectable="on">
+		选择我试试，你会发现怎么也选择不到我，哈哈哈哈
+	</div>
+	<div>
+		选择我试试，你会发现怎么也选择不到我，哈哈哈哈
+	</div> -->
+	<script src="js/jquery-1.12.3.js"></script>
+	<script src="js/demo.js"></script>
+</body>
+</html>
